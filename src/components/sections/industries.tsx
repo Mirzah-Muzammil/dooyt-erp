@@ -1,6 +1,3 @@
-"use client";
-
-import React from "react";
 import Image from "next/image";
 
 interface Industry {
@@ -32,7 +29,6 @@ export default function Industries({ industries }: IndustriesProps) {
     };
   };
 
-  // Compile individual industry objects with database content or mockup fallbacks
   const solar = getIndustryData(
     "solar",
     "Solar",
@@ -119,7 +115,6 @@ export default function Industries({ industries }: IndustriesProps) {
     <section id="industries" className="py-20 lg:py-28 bg-white relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3" data-aos="fade-up">
           <span className="text-sm font-semibold text-[#FF5E1A] tracking-wider uppercase block">
             Industries
@@ -132,7 +127,6 @@ export default function Industries({ industries }: IndustriesProps) {
           </p>
         </div>
 
-        {/* Top 6 Vertical Cards organized in 3 Columns */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
           {columns.map((column, colIdx) => (
             <div key={colIdx} className="flex flex-col gap-6 lg:gap-8" data-aos="fade-up" data-aos-delay={colIdx * 100}>
@@ -142,7 +136,6 @@ export default function Industries({ industries }: IndustriesProps) {
                   className="bg-[#fffbf9] rounded-[24px] p-6 flex flex-col justify-between shadow-xs transition-all duration-300 hover:shadow-lg hover:-translate-y-1 h-full space-y-6"
                 >
                   {item.textFirst ? (
-                    // Text then Image
                     <>
                       <div className="space-y-3">
                         <h3 className="text-xl sm:text-2xl font-bold text-gray-900 tracking-tight">
@@ -164,7 +157,6 @@ export default function Industries({ industries }: IndustriesProps) {
                       </div>
                     </>
                   ) : (
-                    // Image then Text
                     <>
                       <div className="relative w-full aspect-[16/9] rounded-[16px] overflow-hidden bg-[#fffbf9]">
                         <Image
@@ -192,7 +184,6 @@ export default function Industries({ industries }: IndustriesProps) {
           ))}
         </div>
 
-        {/* Bottom 2 Horizontal Cards in a 2-Column Row */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mt-6 lg:mt-8">
           {bottomRow.map((item, idx) => (
             <div

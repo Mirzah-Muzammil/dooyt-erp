@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Phone, ChevronRight, Star } from "lucide-react";
@@ -10,7 +8,6 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <section className="relative overflow-hidden" data-aos="fade-up" data-aos-duration="800">
-      {/* Background Decorative Blur Gradients */}
       <div className="absolute top-0 right-0 -z-10 w-96 h-96 bg-orange-100/30 rounded-full filter blur-3xl opacity-60 translate-x-1/4 -translate-y-1/4" />
       <div className="absolute bottom-10 left-0 -z-10 w-96 h-96 bg-amber-100/20 rounded-full filter blur-3xl opacity-50 -translate-x-1/4" />
 
@@ -26,19 +23,16 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Headline */}
           <h1 className="text-4xl sm:text-5xl font-semibold lg:text-[68px] font-black text-gray-900 tracking-tight leading-none">
             Accuracy. Productivity.
             <br />
             <span className="text-primary mt-2 inline-block">Business Wins</span>
           </h1>
 
-          {/* Subheading */}
           <p className="text-sm sm:text-base lg:text-[17px] text-gray-500 font-normal max-w-xl mx-auto leading-relaxed tracking-tight">
             Instead of using many tools, just choose one to control your entire business effortlessly. Dooyt, the best ERP software that makes smarter decisions and drives business growth.
           </p>
 
-          {/* Action CTAs */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-3">
             <label
               htmlFor="demo-modal-toggle"
@@ -59,7 +53,6 @@ export default function Hero() {
             </Link>
           </div>
 
-          {/* Star Ratings index */}
           <div className="flex items-center justify-center gap-1.5 pt-3">
             <div className="flex items-center text-amber-500">
               {[...Array(5)].map((_, i) => (

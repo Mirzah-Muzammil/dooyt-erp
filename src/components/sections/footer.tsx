@@ -1,6 +1,3 @@
-"use client";
-
-import React from "react";
 import { Apple } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -9,11 +6,8 @@ export default function Footer() {
   return (
     <footer className="bg-black text-zinc-400 pt-20 pb-0 border-t border-zinc-900 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* Top half grid */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-8 pb-12">
           
-          {/* Logo & Description Column (Left) */}
           <div className="md:col-span-5 space-y-6">
             <Link href="#" className="flex items-center gap-1 group">
               {/*  */}
@@ -26,7 +20,6 @@ export default function Footer() {
               Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             </p>
             
-            {/* Download Badges */}
             <div className="flex flex-wrap items-center gap-3 pt-2">
               <a
                 href="#"
@@ -53,13 +46,10 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Spacer */}
           <div className="hidden md:block md:col-span-1"></div>
 
-          {/* Navigation Links Columns (Right) */}
           <div className="md:col-span-6 grid grid-cols-3 gap-6 sm:gap-8">
             
-            {/* Quick Links Column 1 */}
             <div className="space-y-4">
               <h4 className="text-sm font-semibold text-white tracking-wider">Quick Links</h4>
               <ul className="space-y-3 text-sm">
@@ -81,7 +71,6 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* Explore Column */}
             <div className="space-y-4">
               <h4 className="text-sm font-semibold text-white tracking-wider">Explore</h4>
               <ul className="space-y-3 text-sm">
@@ -103,7 +92,6 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* Quick Links Column 2 */}
             <div className="space-y-4">
               <h4 className="text-sm font-semibold text-white tracking-wider">Quick Links</h4>
               <ul className="space-y-3 text-sm">
@@ -129,16 +117,13 @@ export default function Footer() {
 
         </div>
 
-        {/* Divider line */}
         <div className="border-t border-zinc-800/60 my-0"></div>
 
-        {/* Copyright & Social bar */}
         <div className="py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <span className="text-xs text-zinc-500 tracking-wide font-normal">
             Copyright © 2025 DOOYT. All Rights Reserved
           </span>
           
-          {/* Social Icons inside dark square boxes */}
           <div className="flex items-center gap-3">
             <a
               href="#"
@@ -174,7 +159,6 @@ export default function Footer() {
 
       </div>
 
-      {/* Large Bottom Background Logo Image */}
       <div className="w-full flex justify-center mt-6 select-none pointer-events-none">
         <Image
           src="/images/footer.png"

@@ -1,6 +1,3 @@
-"use client";
-
-import React from "react";
 import Image from "next/image";
 
 export default function Features() {
@@ -8,7 +5,6 @@ export default function Features() {
     <section id="features" className="py-20 lg:py-28 bg-white relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Header */}
         <div className="text-left mb-16 space-y-4 max-w-4xl" data-aos="fade-up">
           <span className="text-sm font-semibold text-[#FF5E1A] tracking-wider uppercase block">
             Features
@@ -21,10 +17,7 @@ export default function Features() {
           </p>
         </div>
 
-        {/* 3-Column Features Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 items-stretch">
-          
-          {/* Column 1: Lead Source (Orange Gradient Background) */}
           <div className="bg-gradient-to-br from-[#FF8C20] to-[#FF5E1A] p-8 sm:p-10 rounded-[32px] flex items-center justify-center shadow-xs min-h-[350px] lg:min-h-[420px] transition-all duration-300 hover:shadow-lg hover:-translate-y-1" data-aos="fade-up" data-aos-delay="100">
             <div className="w-full max-w-[360px] bg-white rounded-[20px] overflow-hidden shadow-md flex items-center justify-center p-4">
               <Image
@@ -38,7 +31,6 @@ export default function Features() {
             </div>
           </div>
 
-          {/* Column 2: Dashboard Info Text (Light Peach Background) */}
           <div className="bg-[#FFF5F1] p-8 sm:p-10 lg:p-12 rounded-[32px] flex flex-col justify-center text-left min-h-[350px] lg:min-h-[420px] space-y-5 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" data-aos="fade-up" data-aos-delay="200">
             <h3 className="text-2xl sm:text-3xl font-semibold tracking-tight text-gray-900 leading-tight">
               Real-Time Dashboards for Every Department
@@ -48,7 +40,6 @@ export default function Features() {
             </p>
           </div>
 
-          {/* Column 3: Task History (Blue Gradient Background) */}
           <div className="bg-gradient-to-br from-[#3B66FF] to-[#1E40AF] p-8 sm:p-10 rounded-[32px] flex items-center justify-center shadow-xs min-h-[350px] lg:min-h-[420px] transition-all duration-300 hover:shadow-lg hover:-translate-y-1" data-aos="fade-up" data-aos-delay="300">
             <div className="w-full max-w-[360px] bg-white rounded-[20px] overflow-hidden shadow-md flex items-center justify-center p-4">
               <Image

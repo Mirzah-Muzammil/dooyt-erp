@@ -23,20 +23,16 @@ export default function Faqs({ faqs }: FaqsProps) {
 
   return (
     <section id="faq" className="py-20 lg:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-white relative">
-        {/* Section Header */}
         <div className="mb-10 text-left w-full" data-aos="fade-up">
           <h2 className="text-3xl sm:text-4xl font-semibold text-gray-900 tracking-tight">
             Frequently Asked Questions (FAQ)
           </h2>
         </div>
-
-        {/* Dynamic content rendering */}
         {!faqs || faqs.length === 0 ? (
           <div className="text-center py-16 bg-white rounded-custom border border-gray-150/80 shadow-xs max-w-lg mx-auto p-8">
             <h3 className="text-lg font-bold text-gray-900 mb-1">No FAQs Found</h3>
           </div>
         ) : (
-          // Accordion List
           <div className="space-y-4 w-full">
             {faqs.map((faq, idx) => {
               const isOpen = openId === faq.id;
@@ -63,8 +59,6 @@ export default function Faqs({ faqs }: FaqsProps) {
                       )}
                     </div>
                   </button>
-
-                  {/* Collapsible Panel */}
                   <div
                     className={`transition-all duration-300 ease-in-out overflow-hidden ${
                       isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0 pointer-events-none"

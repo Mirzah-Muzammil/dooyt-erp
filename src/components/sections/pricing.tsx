@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import {
   Check,
   Rocket,
@@ -28,7 +28,8 @@ interface DBPlan {
 }
 
 interface PricingProps {
-  plans: DBPlan[];
+  monthlyPlans: DBPlan[];
+  annualPlans: DBPlan[];
   onRequestDemo?: (plan?: string) => void;
 }
 
@@ -47,48 +48,10 @@ function parsePlanFeatures(features: string[] | string): string[] {
   }
 }
 
-export default function Pricing({ plans: dbPlans }: PricingProps) {
+export default function Pricing({ monthlyPlans, annualPlans }: PricingProps) {
   const [billing, setBilling] = useState<"monthly" | "annual">("monthly");
-  const [plans, setPlans] = useState<DBPlan[]>(dbPlans);
-  const [isLoadingPlans, setIsLoadingPlans] = useState(false);
-  const [plansError, setPlansError] = useState<string | null>(null);
-
-  useEffect(() => {
-    let isMounted = true;
-
-    async function loadPlans() {
-      setIsLoadingPlans(true);
-      setPlansError(null);
-
-      try {
-        const response = await fetch(`/api/plans?billing=${billing}`);
-
-        if (!response.ok) {
-          throw new Error("Could not load pricing plans.");
-        }
-
-        const nextPlans = (await response.json()) as DBPlan[];
-
-        if (isMounted) {
-          setPlans(nextPlans);
-        }
-      } catch (error) {
-        if (isMounted) {
-          setPlansError(error instanceof Error ? error.message : "Could not load pricing plans.");
-        }
-      } finally {
-        if (isMounted) {
-          setIsLoadingPlans(false);
-        }
-      }
-    }
-
-    loadPlans();
-
-    return () => {
-      isMounted = false;
-    };
-  }, [billing]);
+  
+  const plans = billing === "monthly" ? monthlyPlans : annualPlans;
 
   const normalizedPlans = plans.map((plan) => ({
     ...plan,
@@ -106,6 +69,8 @@ export default function Pricing({ plans: dbPlans }: PricingProps) {
     { icon: Home, label: "Stay compliant" },
     { icon: BarChart3, label: "Keep Finances on Track" },
   ];
+
+  const hasPlans = monthlyPlans && monthlyPlans.length > 0;
 
   return (
     <section id="pricing" className="py-20 lg:py-28 bg-white relative">
@@ -145,18 +110,13 @@ export default function Pricing({ plans: dbPlans }: PricingProps) {
               </button>
             </div>
             <span className="text-xs text-[#FF5E1A] font-semibold">
-              {isLoadingPlans ? "Updating prices..." : "-15% off on annual payments"}
+              -15% off on annual payments
             </span>
-            {plansError && (
-              <span className="text-xs text-red-500 font-semibold">
-                {plansError}
-              </span>
-            )}
           </div>
         </div>
 
         {/* Pricing Cards Grid */}
-        {!dbPlans || dbPlans.length === 0 ? (
+        {!hasPlans ? (
           <div className="text-center py-16 bg-white rounded-custom border border-gray-150/80 shadow-xs max-w-lg mx-auto p-8">
             <h3 className="text-lg font-bold text-gray-900 mb-1">No plans found</h3>
           </div>

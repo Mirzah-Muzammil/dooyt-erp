@@ -1,14 +1,9 @@
-"use client";
-
-import React from "react";
 import Image from "next/image";
 
 export default function CtaBanner() {
   return (
     <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative overflow-visible">
       <div className="bg-gradient-to-r from-[#FF5E1A] via-[#FF5E1A] to-[#FF904E] rounded-[32px] md:rounded-[40px] px-8 sm:px-12 md:px-16 py-8 flex flex-col md:flex-row items-center justify-between relative overflow-visible  shadow-lg" data-aos="fade-up">
-        
-        {/* Left Side: Content Details */}
         <div className="flex-1 space-y-6 text-left max-w-xl z-10">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight">
             Make Every Day A Win with Dooyt
@@ -34,8 +29,6 @@ export default function CtaBanner() {
             </label>
           </div>
         </div>
-
-        {/* Right Side: Mockup hand image overflowing the container */}
         <div className="relative md:absolute md:right-8 lg:right-16 w-full md:w-[350px] md:-bottom-1 lg:w-[420px] mt-8 md:mt-0 flex items-end justify-center z-20 overflow-visible">
           <Image
             src="/images/hand.png"

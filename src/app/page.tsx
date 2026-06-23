@@ -15,7 +15,7 @@ import Providers from "@/components/providers";
 export const dynamic = "force-dynamic";
 
 export default async function Home() {
-  const { modules, industries, plans, testimonials, faqs } =
+  const { modules, industries, monthlyPlans, annualPlans, testimonials, faqs } =
     await getLandingPageData();
 
   return (
@@ -28,7 +28,7 @@ export default async function Home() {
         <Features />
         <Industries industries={industries} />
         <CtaBanner />
-        <Pricing plans={plans} />
+        <Pricing monthlyPlans={monthlyPlans} annualPlans={annualPlans} />
         <Testimonials testimonials={testimonials} />
         <Faqs faqs={faqs} />
         </Providers>

@@ -87,10 +87,11 @@ export function getFaqs() {
 }
 
 export async function getLandingPageData() {
-  const [modules, industries, plans, testimonials, faqs] = await Promise.all([
+  const [modules, industries, monthlyPlans, annualPlans, testimonials, faqs] = await Promise.all([
     withFallback(getModules(), []),
     withFallback(getIndustries(), []),
     withFallback(getPlans("monthly"), []),
+    withFallback(getPlans("annual"), []),
     withFallback(getTestimonials(1, 10), []),
     withFallback(getFaqs(), []),
   ]);
@@ -98,7 +99,8 @@ export async function getLandingPageData() {
   return {
     modules,
     industries,
-    plans,
+    monthlyPlans,
+    annualPlans,
     testimonials,
     faqs,
   };
