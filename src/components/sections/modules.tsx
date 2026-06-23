@@ -96,7 +96,7 @@ export default function Modules({ modules }: ModulesProps) {
                 <div className=" flex justify-end items-end w-full max-w-xl relative rounded-xl overflow-hidden border border-orange-100/20 shadow-md bg-white"
                 data-aos="fade-right" data-aos-delay="100"
                 >
-                  <Image
+                  <Image 
                     src="/images/crm.png" // Standard layout screenshot, real assets can be swapped in
                     alt={`${activeModule.name} Dashboard Mockup`}
                     width={600}
