@@ -2,7 +2,7 @@ const skeletonCards = Array.from({ length: 3 }, (_, index) => index);
 
 export default function Loading() {
   return (
-    <main className="min-h-screen bg-white px-4 pt-28 pb-20 sm:px-6 lg:px-8">
+    <main className="min-h-screen bg-white px-4 pt-28 pb-20 sm:px-6 lg:px-8 ">
       <section className="mx-auto flex max-w-7xl flex-col items-center text-center">
         <div className="mb-6 h-8 w-36 animate-pulse rounded-full bg-[#FFF3EC]" />
         <div className="mb-4 h-12 w-full max-w-2xl animate-pulse rounded-2xl bg-gray-100 sm:h-16" />

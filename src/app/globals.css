@@ -36,6 +36,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden !important;
 }
 
 body {
@@ -44,7 +45,9 @@ body {
   font-family: var(--font-sans);
   font-weight: 500; /* Host Grotesk Medium weight */
   font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  overflow-x: hidden !important;
 }
+
 
 /* Custom Scrollbar for premium feel */
 ::-webkit-scrollbar {

@@ -63,7 +63,7 @@ export default function Navbar() {
           </div>
             <label
               htmlFor="demo-modal-toggle"
-              className="bg-black text-white hover:bg-neutral-900 active:scale-[0.98] font-bold text-xs px-5 py-2.5 rounded-xl border border-transparent shadow-xs tracking-tight transition-all cursor-pointer select-none text-center block"
+              className="bg-black text-white hidden lg:flex hover:bg-neutral-900 active:scale-[0.98] font-bold text-xs px-5 py-2.5 rounded-xl border border-transparent shadow-xs tracking-tight transition-all cursor-pointer select-none text-center block"
             >
               Request A Demo
             </label>
