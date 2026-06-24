@@ -33,7 +33,7 @@ export default function Hero() {
             Instead of using many tools, just choose one to control your entire business effortlessly. Dooyt, the best ERP software that makes smarter decisions and drives business growth.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-3">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-3 px-4">
             <label
               htmlFor="demo-modal-toggle"
               className="w-full sm:w-auto bg-primary hover:bg-primary-hover text-white font-bold rounded-full px-8 py-3.5 flex items-center justify-center gap-2 active:scale-[0.98] transition-all cursor-pointer shadow-md shadow-orange-500/10 text-sm select-none text-center"
